@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1536675691 source:c:\users\alumno\desktop\rouaux\clase-del-11-9-18\vectoresparalelos\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1536784995 source:c:\users\sanro\onedrive\escritorio\clase-del-11-9-18\vectoresparalelos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1536872028 source:c:\users\sanro\onedrive\escritorio\trabajo\11-9-18\vectoresparalelos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"biblio.h"
+
+1536871215 c:\users\sanro\onedrive\escritorio\trabajo\11-9-18\vectoresparalelos\biblioteca.h
+
+1536872028 c:\users\sanro\onedrive\escritorio\trabajo\11-9-18\vectoresparalelos\biblio.h
+
+1537198224 source:c:\users\alumno\desktop\clase-del-17-9-18\vectoresparalelos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"biblio.h"
+
+1537197654 c:\users\alumno\desktop\clase-del-17-9-18\vectoresparalelos\biblio.h
+
