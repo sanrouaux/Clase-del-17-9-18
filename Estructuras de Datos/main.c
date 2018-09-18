@@ -11,6 +11,7 @@ typedef struct //Indico que voy a definir un tipo de dato
     char nombre[50];
     int nota;
     float altura;
+    int estado;
 } eAlumno; //Esta es la forma típica de nombrar estructuras. Se trata de un alias
 
 
@@ -20,6 +21,7 @@ eAlumno cargarAlumno();
 void cargarListadoDeAlumnos(eAlumno[], int);
 void mostrarListadoDeAlumnos(eAlumno[], int);
 void ordenarListadoDeAlumnos(eAlumno[], int);
+void modificarListadoDeAlumnos(eAlumno[], int);
 
 
 int main()
@@ -58,11 +60,18 @@ int main()
     //---------MENU DE OPCIONES-----//
 
     eAlumno listadoAlumnos[A];
+
+    int i;
+    for(i = 0; i < A; i++) //puede ser funcion
+    {
+        listadoAlumnos[i].estado=-1;
+    }
+
     char opcion;
 
     do
     {
-        printf("a. Alta de alumno\no. Ordenar alumnos\nm. Mostrar alumnos\n");
+        printf("a. Alta de alumno\no. Ordenar alumnos\nm. Mostrar alumnos\nM. Modificar");
         printf("Ingrese una opcion: ");
         opcion = getche(); //funcion que devuelve un caracter
 
@@ -80,6 +89,9 @@ int main()
             mostrarListadoDeAlumnos();
             break;
 
+        case 'M':
+            modificarListadoDeAlumnos();
+            break;
         }
     }
 
@@ -163,3 +175,22 @@ void ordenarListadoDeAlumnos(eAlumno listado[], int tam)
     }
 }
 
+void modificarListadoDeAlumnos(eAlumno listadoAlumnos[], int tam)
+{
+    int legajo;
+
+    printf("Ingrese un legajo a buscar: ");
+    scanf("%d", &legajo);
+
+    for(i=0; i<tam; i++)
+    {
+        if(legajo == listadoAlumnos[i].legajo)
+        {
+            //mostrar el alumno
+            //pedir nueva nota
+            //pregunto si esta seguro
+            //si: hago asignacion de la nota, no: aviso cancelacion de modificacion
+            //mostrar aviso si no encontro el legajo
+        }
+    }
+}
