@@ -11,7 +11,7 @@ typedef struct //Indico que voy a definir un tipo de dato
     char nombre[50];
     int nota;
     float altura;
-}eAlumno; //Esta es la forma típica de nombrar estructuras. Se trata de un alias
+} eAlumno; //Esta es la forma típica de nombrar estructuras. Se trata de un alias
 
 
 //PROTOTIPO DE FUNCIONES
@@ -47,11 +47,46 @@ int main()
     mostrarUnAlumno(miAlumno);*/
 
 
-    eAlumno listadoMain[A];
+    /*eAlumno listadoMain[A];
     cargarListadoDeAlumnos(listadoMain, A);
     mostrarListadoDeAlumnos(listadoMain, A);
     ordenarListadoDeAlumnos(listadoMain, A);
     mostrarListadoDeAlumnos(listadoMain, A);
+    */
+
+
+    //---------MENU DE OPCIONES-----//
+
+    eAlumno listadoAlumnos[A];
+    char opcion;
+
+    do
+    {
+        printf("a. Alta de alumno\no. Ordenar alumnos\nm. Mostrar alumnos\n");
+        printf("Ingrese una opcion: ");
+        opcion = getche(); //funcion que devuelve un caracter
+
+        switch(opcion)
+        {
+        case 'a':
+            cargarListadoDeAlumnos();
+            break;
+
+        case 'o':
+            ordenarListadoDeAlumnos();
+            break;
+
+        case 'm':
+            mostrarListadoDeAlumnos();
+            break;
+
+        }
+    }
+
+
+
+
+
     return 0;
 }
 
@@ -90,7 +125,10 @@ void cargarListadoDeAlumnos(eAlumno listado[], int tam)
     int i;
     for(i = 0; i < tam; i++)
     {
-        listado[i] = cargarAlumno();
+        //listado[i] = cargarAlumno();
+        // Otra opción:
+        printf("Ingrese legajo: ");
+        scanf("%d", &listado[i].legajo);
     }
 }
 
